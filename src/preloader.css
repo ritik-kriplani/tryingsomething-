@@ -1,0 +1,84 @@
+/* Full-screen Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #191389, #6f6fc6, #69def6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+  }
+  
+  /* Fade Out Animation */
+  .preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s;
+  }
+  
+  /* Animation Container */
+  .animation-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  /* Floating Effect Keyframes */
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Popup Animation for Entry */
+  @keyframes popup {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Preloader Text */
+  .preloader-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Dancing Script", cursive;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Pulse Animation for Text */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
+  
