@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./login.css";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,18 +18,18 @@ const Login = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="full">
       <div className="login-container">
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
             <input
-              type="email"
+              type="text"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Enter your Name"
               required
             />
           </div>

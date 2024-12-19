@@ -10,7 +10,7 @@ const Preloader = ({ onComplete }) => {
     // Simulate preloader timeout (you can change the delay)
     const timer = setTimeout(() => {
       setFadeOut(true); // Trigger fade out animation
-      setTimeout(onComplete, 1000); // Call the onComplete callback after fadeout
+      setTimeout(onComplete, 2000); // Call the onComplete callback after fadeout
     }, 5000); // Preloader duration in milliseconds
 
     return () => clearTimeout(timer); // Clean up timer
